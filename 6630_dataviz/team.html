@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>NFL Viz — Team</title>
+<link rel="stylesheet" href="./styles.css" />
+<script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+</head>
+<body>
+<header><h1>Team Page</h1></header>
+<main class="grid2">
+<div class="card">
+<div id="teamLogo" class="logo" style="width:100%;height:160px">Logo</div>
+<h2 id="teamName">TEAM</h2>
+<div class="small"><span id="teamConf"></span> · <span id="teamDiv"></span> <span class="badge" id="teamSeason"></span></div>
+<div class="caption" id="teamInfo">Aggregated from player-level weekly stats.</div>
+</div>
+<div class="card">
+<div class="tabs" id="teamMetricTabs"></div>
+<div id="teamChart" class="chart"></div>
+<div class="caption">Weekly team totals by selected metric.</div>
+</div>
+</main>
+<footer>Milestone prototype.</footer>
+<script type="module" src="./team.js"></script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+{
+"BUF": ["AFC", "EAST"], "MIA": ["AFC", "EAST"], "NE": ["AFC", "EAST"], "NYJ": ["AFC", "EAST"],
+"BAL": ["AFC", "NORTH"], "CIN": ["AFC", "NORTH"], "CLE": ["AFC", "NORTH"], "PIT": ["AFC", "NORTH"],
+"HOU": ["AFC", "SOUTH"], "IND": ["AFC", "SOUTH"], "JAX": ["AFC", "SOUTH"], "TEN": ["AFC", "SOUTH"],
+"DEN": ["AFC", "WEST"], "KC": ["AFC", "WEST"], "LV": ["AFC", "WEST"], "LAC": ["AFC", "WEST"],
+"DAL": ["NFC", "EAST"], "NYG": ["NFC", "EAST"], "PHI": ["NFC", "EAST"], "WAS": ["NFC", "EAST"],
+"CHI": ["NFC", "NORTH"], "DET": ["NFC", "NORTH"], "GB": ["NFC", "NORTH"], "MIN": ["NFC", "NORTH"],
+"ATL": ["NFC", "SOUTH"], "CAR": ["NFC", "SOUTH"], "NO": ["NFC", "SOUTH"], "TB": ["NFC", "SOUTH"],
+"ARI": ["NFC", "WEST"], "LAR": ["NFC", "WEST"], "SF": ["NFC", "WEST"], "SEA": ["NFC", "WEST"]
+}
