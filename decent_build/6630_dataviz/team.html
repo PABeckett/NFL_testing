@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>NFL — Team Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="./styles.css" />
+  <!-- d3 (non-module) -->
+  <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+</head>
+<body>
+  <header>
+    <h1>Team Page</h1>
+    <div class="small" id="statusLine">Loading…</div>
+  </header>
+
+  <main class="grid2">
+    <!-- LEFT: team identity card -->
+    <div class="card">
+      <div id="teamLogoBox" class="card" style="height:180px; display:grid; place-items:center; margin:0 0 12px;">
+        <img id="teamLogo" alt="Team" style="max-width:160px; max-height:140px; display:none;" />
+        <div id="teamLogoFallback" class="small" style="opacity:.7;">Logo</div>
+      </div>
+
+      <h2 id="teamName">TEAM</h2>
+      <ul class="small" style="margin:.5rem 0 0 1rem;">
+        <li id="teamMetaDot">•</li>
+      </ul>
+      <div class="caption">Aggregated from weekly team stats.</div>
+
+      <div style="margin-top:12px;">
+        <button id="btnBackLeague" class="pill back">← League Home</button>
+      </div>
+    </div>
+
+    <!-- RIGHT: metric tabs + chart -->
+    <div class="card">
+      <div class="tabs" id="teamMetricTabs"></div>
+      <div class="controls" id="mirrorControls" style="margin:.25rem 0 .5rem; display:none;">
+        <button id="btnMirror" class="pill">Mirror: On</button>
+        <button id="btnFlip" class="pill">Up: Offense</button>
+      </div>
+      <div id="teamChart" class="chart"></div>
+      <div class="caption">Weekly team totals by selected metric.</div>
+    </div>
+  </main>
+
+  <footer class="small" style="text-align:center; padding:1rem;">
+    Milestone prototype.
+  </footer>
+
+  <script src="./team.js?v=1"></script>
+</body>
+</html>

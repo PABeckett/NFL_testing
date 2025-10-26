@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NFL Viz — Home</title>
+
+  <!-- Prevent favicon 404 -->
+  <link rel="icon" href="data:," />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="./styles.css" />
+  <style>
+    th.sortable { cursor: pointer; user-select: none; }
+    th.sortable .arrow { margin-left: 6px; opacity: 0.5; }
+    th.sortable.active { color: #111; }
+    th.sortable.active .arrow { opacity: 1; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Home / League Page</h1>
+    <div class="logos">
+      <div class="logo">AFC</div>
+      <div class="logo">NFL</div>
+      <div class="logo">NFC</div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Conference / Division pills -->
+    <div class="controls">
+      <div class="pill conf" data-conf="AFC">AFC</div>
+      <div class="pill conf" data-conf="NFC">NFC</div>
+      <div class="pill" id="btnNFL">NFL</div>
+      <div style="width:1px; background:#eee; height:28px;"></div>
+      <div class="pill div" data-div="NORTH">NORTH</div>
+      <div class="pill div active" data-div="EAST">EAST</div>
+      <div class="pill div" data-div="SOUTH">SOUTH</div>
+      <div class="pill div" data-div="WEST">WEST</div>
+      <div class="pill div" data-div="ALL">ALL</div>
+    </div>
+
+    <!-- Controls row: Player / Metric / Position / Season -->
+    <div class="controls">
+
+      <input type="text"
+           id="playerInput"
+           class="select"
+           placeholder="Search player name..."
+           autocomplete="off" />
+
+      <div id="playerSuggestions" class="suggestions"></div>
+
+      <select id="metricSelect" class="select" style="min-width:200px"></select>
+      <select id="positionSelect" class="select" style="min-width:140px"></select>
+      <select id="seasonSelect" class="select" style="min-width:140px"></select>
+
+      <button id="toggleAdvanced" class="pill">Show Advanced Stats</button>
+
+    </div>
+
+    <!-- Players table -->
+    <div class="table-wrap">
+      <table id="playerTable">
+        <thead>
+          <tr>
+            <th class="sortable" data-key="display">Player <span class="arrow">↕</span></th>
+            <th class="sortable" data-key="team">Team <span class="arrow">↕</span></th>
+            <th class="sortable" data-key="gp">Games Played <span class="arrow">↕</span></th>
+            <th class="sortable" data-key="avg">Average <span class="arrow">↕</span></th>
+            <th class="adv-col sortable" style="display:none;" data-key="balAvg">Bal AVG <span class="arrow">↕</span></th>
+            <th class="adv-col sortable" style="display:none;" data-key="sd">SD <span class="arrow">↕</span></th>
+            <th class="adv-col sortable" style="display:none;" data-key="cv">CV% <span class="arrow">↕</span></th>
+            <th class="sortable" data-key="value" data-default="desc">Total <span class="arrow">↕</span></th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+    <!-- Status line for diagnostics -->
+    <p id="statusLine" class="small"></p>
+  </main>
+
+  <footer>Milestone prototype — data from <code>data/playerdata.csv</code></footer>
+
+  <!-- Load D3 (global) and your script (classic, NOT a module) -->
+  <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+  <script src="./script.js?v=4"></script>
+</body>
+</html>

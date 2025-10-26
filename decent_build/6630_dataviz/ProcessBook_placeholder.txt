@@ -1,0 +1,19 @@
+# NFL Viz — Process Book (Milestone) -> MD? Probably pdf with the images and version and stuff
+
+
+## Data Acquisition
+- Source: course‑provided CSVs (player‑level weekly stats).
+
+
+## Data Cleaning & Structures
+- Columns used for metrics: `passing_yards`, `passing_tds`, `rushing_yards`, `rushing_tds`, `receiving_yards`, `receiving_tds`, `targets`, `receptions`.
+- Aggregations:
+- Home page table: per‑player sums across weeks (filtered by season/conference/division/position).
+- Team page: per‑week team totals.
+- Player page: per‑week player totals.
+
+
+## Design
+- Home: AFC/NFC + division pills; metric/season/position filters; ranked table — per your sketch.
+- Player: headshot + info panel; metric tabs; weekly line chart.
+- Team: logo + info; metric tabs; weekly line chart.
